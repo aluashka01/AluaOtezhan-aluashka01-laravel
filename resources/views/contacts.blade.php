@@ -157,7 +157,7 @@ body{
     height: 100px;
     border-radius: 0 0 40% 10%;
     box-shadow: 0px 2px 4px white ;
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 150px;
     display: flex;
     justify-content: space-around;
