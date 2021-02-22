@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,800;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    
+
+}
+
+body{
+    height: 100%;
+    min-height: 100vh;
+}
+.header .menu{
+    display: absolute;
+    margin-right: 30px;
+    
+}
+
+.header .logo{
+    height: 60px;
+    width: 60px;
+    margin-left: 100px;
+}
+.header .menu ul li{
+
+    display: inline;
+    padding: 10px 60px;
+}
+.header{
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    border-radius: 0 0 40% 10%;
+    box-shadow: 0px 2px 4px white ;
+    font-size: 20px;
+    margin-right: 150px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    z-index: 2;
+    
+}
+
+li{
+    cursor: pointer;
+}
+.page-cont{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-image: url(2227996.jpg);
+    
+}
+
+.tx h1{
+    position: absolute;
+    margin: 0;
+    padding:160px 0 0 220px;
+    font-family: 'Bad Script',cursive;
+    color:rgb(39, 148, 238);
+    font-size: 70px;
+}
+.tx h1 span{
+    display: table-cell;
+    animation: animate 2s linear infinite;
+}
+.tx h1 span:nth-child(1){
+    animation-delay: 0s;
+}
+.tx h1 span:nth-child(2){
+    animation-delay: 0.25s;
+}
+.tx h1 span:nth-child(3){
+    animation-delay: 0.5s;
+}
+.tx h1 span:nth-child(4){
+    animation-delay: 0.75s;
+}
+.tx h1 span:nth-child(5){
+    animation-delay: 1s;
+}
+.tx h1 span:nth-child(6){
+    animation-delay: 1.25s;
+}
+.tx h1 span:nth-child(7){
+    animation-delay: 1.5s;
+}
+.tx h1 span:nth-child(8){
+    animation-delay: 1.75s;
+}
+.tx h1 span:nth-child(9){
+    animation-delay: 2s;
+}
+
+@keyframes animate{
+
+    0%,100%{
+         color: rgb(255, 255, 255);
+         filter: blur(5px);
+         
+
+
+    }
+    5%,95%{
+        color: rgb(5, 154, 199);
+        filter: blur(0px);
+        text-shadow:0 0 10px none,
+   }
+    
+}
+
+#tp_time{
+    color: rgb(255, 255, 255);
+    padding: 265px 0 0 80px;
+    font-size: 34px;
+    width: 800px;
+    
+    line-height: 50px;
+    position:absolute;
+   
+}
+
+
+.swiper-container {
+    top: 160px;
+    width: 400px;
+    height: 400px;
+    left: 25%;
+    position: absolute;
+    box-shadow: 0px 10px 20px 22px gray ;
+    margin-left: 500px;
+    margin-top: 50px;
+    background-size: cover;
+    z-index: 1;
+  }
+#carouselExampleIndicators{
+    position: relative;
+    margin-top: 100px;
+    margin-left: -500px;
+    width: 550px;
+    height: 1000px;
+}
+.wrapper {
+    width: 1300px;
+    background-color:wheat;
+    position: relative;
+    margin-left: -800px;
+    display: flex;
+    padding: 20px;
+    z-index: 2;
+  }
+ 
+  .clearfix:after,
+  .clearfix:before {
+    content: ".";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+    clear: both;
+    bottom:0px;
+  }
+  .ico-wrap {
+      color: #ECAB00;
+      width: 50px;
+      height: 50px;
+      margin: 25px 20px 2px 2px;
+      display: block;
+      text-align: center;
+      font-size: 25px;
+      border: 2px solid #ECAB00;
+      float: left;
+  }
+  .ico-contact {
+      line-height: 1.9 !important;
+  }
+  .descript-wrapper {
+      float: left;
+      margin-bottom: 20px;
+  }
+  .aio-icon-title {
+      font-size: 18px;
+      color: #ECAB00;
+      line-height: 1;
+      margin-bottom: 10px;
+  }
+   
+.cn{
+    text-align: center;
+}
