@@ -93,8 +93,8 @@ body{
 }
 
 .header .logo{
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     margin-left: 100px;
 }
 .header .menu ul li{
@@ -111,7 +111,7 @@ body{
     height: 100px;
     border-radius: 0 0 40% 10%;
     box-shadow: 0px 2px 4px white ;
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 150px;
     display: flex;
     justify-content: space-around;
@@ -138,7 +138,7 @@ li a{
     padding:130px 0 0 220px;
     font-family: 'Bad Script',cursive;
     color:rgb(39, 148, 238);
-    font-size: 70px;
+    font-size: 75px;
 }
 .tx h1 span{
     display: table-cell;
