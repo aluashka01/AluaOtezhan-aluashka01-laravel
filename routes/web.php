@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
- use app\Models\Post;
+use App\Models\Post;
+
+ 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +27,14 @@ Route::get('/hobby', function () {
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
+Route::get('/post/create', function () {
+DB::table('post')->insert
+([
+    'title'=>'intelligence',
+   'body'=>'Intelligence has been defined in many ways: the capacity for logic, understanding, self-awareness, learning, emotional knowledge, reasoning, planning, creativity, critical thinking, and problem-solving'
+  ]);
+});
+Route::get('/post', function () {
+    $post=Post::find(1);
+    return $post;
+});
