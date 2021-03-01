@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
+ use app\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
