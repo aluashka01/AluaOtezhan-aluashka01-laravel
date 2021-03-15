@@ -28,7 +28,7 @@ Route::get('/hobby', function () {
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
-Route::get('/blog/create', function () {
+Route::get('/blog/add', function () {
 DB::table('blog')->insert
 ([
   'name'=>'Alua',
@@ -38,6 +38,10 @@ DB::table('blog')->insert
 });
 Route::get('/blog', function () {
     $blog=Blog::find(1);
-    return $post;
+    return $blog;
 });
 Route::get('blog', [BlogController::class,'index']);
+Route::get('blog/create', function () {
+    return view('blog.create');
+});
+Route::post('blog/create', [BlogController::class,'store'])->name('add-blog');
