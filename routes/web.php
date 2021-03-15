@@ -16,7 +16,9 @@ use App\Http\Controllers\BlogController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
 
 Route::get('/home', function () {
     return view('home');
