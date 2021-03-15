@@ -36,5 +36,6 @@ class BlogTest extends TestCase
         $response = $this->get('/blog/1');
 
         $response->assertViewHas('blog');
+        
     }
 }
