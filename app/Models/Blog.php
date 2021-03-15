@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Post;
+use App\Models\Blog;
 
 
-class Post extends Model
+class Blog extends Model
 {
     use HasFactory;
-    protected $table = "post";
+    protected $table = "blog";
 }

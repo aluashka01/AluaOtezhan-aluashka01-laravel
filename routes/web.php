@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
-use App\Models\Post;
+use App\Models\Blog;
+use App\Http\Controllers\BlogController;
 
  
 /*
@@ -27,14 +28,16 @@ Route::get('/hobby', function () {
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
-Route::get('/post/create', function () {
-DB::table('post')->insert
+Route::get('/blog/create', function () {
+DB::table('blog')->insert
 ([
-    'title'=>'intelligence',
-   'body'=>'Intelligence has been defined in many ways: the capacity for logic, understanding, self-awareness, learning, emotional knowledge, reasoning, planning, creativity, critical thinking, and problem-solving'
+  'name'=>'Alua',
+   'surname'=>'Otezhan',
+   'age'=>20
   ]);
 });
-Route::get('/post', function () {
-    $post=Post::find(1);
+Route::get('/blog', function () {
+    $blog=Blog::find(1);
     return $post;
 });
+Route::get('blog', [BlogController::class,'index']);
