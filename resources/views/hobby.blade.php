@@ -14,21 +14,22 @@
  
 </head>
 <body>
-
+@extends('layout')
+@section('content')
     <div class="page-cont">
         
     </div>
     
-    <div class="header">
+    <div class="header" style="margin-top:-26px">
         <div class="logo"><img src="{{asset('images/IMGBIN_linkin-park-logo-music-png_fMNWG7rr.png')}}" height="70px" width="70px"></div>
         <div class="menu-wrapper">
 
             <div class="menu">
                          
                 <ul>
-                    <li class="b1"><a href="{{route('home')}}"> About me</a></li>
-                     <li class="b2"><a href="{{route('hobby')}}">Hobby</a></li>
-                     <li class="b" ><a href="{{route('contacts')}}">Contacts</a></li>
+                <li class="b1"><a href="{{route('home')}}"> {{ __('lang.home') }}</a></li>
+                     <li class="b2"><a href="{{route('hobby')}}">{{ __('lang.hobby') }}</a></li>
+                     <li class="b" ><a href="{{route('contacts')}}">{{ __('lang.contacts') }}</a></li>
                     
                 </ul>           
 </div>
@@ -103,8 +104,8 @@ body{
 }
 
 .header .logo{
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     margin-left: 100px;
 }
 .header .menu ul li{
@@ -199,7 +200,7 @@ li a{
 .cn{
     text-align: center;
 }</style>
-  
+  @endsection
 </body>
 
 </html>

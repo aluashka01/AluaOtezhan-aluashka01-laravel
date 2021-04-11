@@ -14,21 +14,22 @@
  
 </head>
 <body>
-
+@extends('layout')
+@section('content')
     <div class="page-cont">
         
     </div>
     
-    <div class="header">
+    <div class="header" style="margin-top:-26px">
         <div class="logo"><img src="{{asset('images/IMGBIN_linkin-park-logo-music-png_fMNWG7rr.png')}}" height="70px" width="70px"></div>
         <div class="menu-wrapper">
 
             <div class="menu">
                          
                 <ul>
-                    <li class="b1"><a href="{{route('home')}}"> About me</a></li>
-                     <li class="b2"><a href="{{route('hobby')}}">Hobby</a></li>
-                     <li class="b" ><a href="{{route('contacts')}}">Contacts</a></li>
+                    <li class="b1"><a href="{{route('home')}}"> {{ __('lang.home') }}</a></li>
+                     <li class="b2"><a href="{{route('hobby')}}">{{ __('lang.hobby') }}</a></li>
+                     <li class="b" ><a href="{{route('contacts')}}">{{ __('lang.contacts') }}</a></li>
                     
                 </ul>           
 </div>
@@ -42,19 +43,11 @@
     <div class = "first">  
     <div class="tx">
         <h1>
-            <span>B</span>
-            <span>i</span>
-            <span>o</span>
-            <span>g</span>
-            <span>r</span>
-            <span>a</span>
-            <span>p</span>
-            <span>h</span>
-            <span>y</span>
+        {{ __('lang.about') }}
             
         </h1>
     </div>
-<div><div id="tp_time">&nbsp;&nbsp;&nbsp;&nbsp;<span>I was born in the Akmola region of northern Kazakhstan.  I value honesty and responsibility in people.  At the university I study programming languages, web programming.  I am fond of sports and drawing.Below are the drawings of my classmates whom I drew</span></div>
+<div><div id="tp_time">&nbsp;&nbsp;&nbsp;&nbsp;<span>{{ __('lang.message') }}</span></div>
 <div class="swiper-container">
   <div class="swiper-wrapper">
     
@@ -75,9 +68,9 @@
 *{
     list-style: none;
     text-decoration: none;
-    margin: 0 auto;
+    margin: 0px auto;
     font-family: 'Raleway', sans-serif;
-    
+    background-color:dark;
 
 }
 .tx{display:inline;}
@@ -106,7 +99,7 @@ body{
 .header{
     align-items: center;
     background-color: black;
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100px;
     border-radius: 0 0 40% 10%;
@@ -127,7 +120,8 @@ li a{
 .page-cont{
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: absolute;
+    background-color:dark;
     background-image: url({{asset('images/2227996.jpg')}});
     
 }
@@ -140,37 +134,7 @@ li a{
     color:rgb(39, 148, 238);
     font-size: 75px;
 }
-.tx h1 span{
-    display: table-cell;
-    animation: animate 2s linear infinite;
-}
-.tx h1 span:nth-child(1){
-    animation-delay: 0s;
-}
-.tx h1 span:nth-child(2){
-    animation-delay: 0.25s;
-}
-.tx h1 span:nth-child(3){
-    animation-delay: 0.5s;
-}
-.tx h1 span:nth-child(4){
-    animation-delay: 0.75s;
-}
-.tx h1 span:nth-child(5){
-    animation-delay: 1s;
-}
-.tx h1 span:nth-child(6){
-    animation-delay: 1.25s;
-}
-.tx h1 span:nth-child(7){
-    animation-delay: 1.5s;
-}
-.tx h1 span:nth-child(8){
-    animation-delay: 1.75s;
-}
-.tx h1 span:nth-child(9){
-    animation-delay: 2s;
-}
+
 
 @keyframes animate{
 
@@ -192,7 +156,7 @@ li a{
 #tp_time{
     color: rgb(255, 255, 255);
     padding: 235px 0 0 80px;
-    font-size: 34px;
+    font-size: 30px;
     width: 800px;
     
     line-height: 50px;
@@ -202,7 +166,7 @@ li a{
 
 
 .swiper-container {
-    top: 130px;
+    top: 180px;
     width: 400px;
     height: 400px;
     left: 25%;
@@ -222,6 +186,7 @@ li a{
 }
 
 }</style>
+@endsection
   
 </body>
 

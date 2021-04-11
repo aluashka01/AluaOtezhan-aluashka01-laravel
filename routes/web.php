@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Blog;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LocalizationController;
 
  
 /*
@@ -48,3 +49,12 @@ Route::get('blog/create', function () {
 });
 Route::post('blog/create', [BlogController::class,'store'])->name('add-blog');
 Route::get('blog/{id}', [BlogController::class,'get_blog']);
+
+
+Route::get('/multiuploads', 'UploadController@uploadForm');
+Route::post('/multiuploads', 'UploadController@uploadSubmit');
+Route::get('/home/{lang}', function ($lang) {
+    App::setlocale($lang);
+    return view('/home');
+});
+Route::get('/home/{lang}','App\Http\Controllers\LocalizationController@index' );

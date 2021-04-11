@@ -14,21 +14,22 @@
  
 </head>
 <body>
-
+@extends('layout')
+@section('content')
     <div class="page-cont">
         
     </div>
     
-    <div class="header">
+    <div class="header" style="margin-top:-26px">
         <div class="logo"><img src="{{asset('images/IMGBIN_linkin-park-logo-music-png_fMNWG7rr.png')}}" height="70px" width="70px"></div>
         <div class="menu-wrapper">
 
             <div class="menu">
                          
                 <ul>
-                    <li class="b1"><a href="{{route('home')}}"> About me</a></li>
-                     <li class="b2"><a href="{{route('hobby')}}">Hobby</a></li>
-                     <li class="b" ><a href="{{route('hobby')}}">Contacts</a></li>
+                <li class="b1"><a href="{{route('home')}}"> {{ __('lang.home') }}</a></li>
+                     <li class="b2"><a href="{{route('hobby')}}">{{ __('lang.hobby') }}</a></li>
+                     <li class="b" ><a href="{{route('contacts')}}">{{ __('lang.contacts') }}</a></li>
                     
                 </ul>           
 </div>
@@ -47,7 +48,7 @@
         <i class="fas fa-mail-bulk"></i>
       </div>
       <form action="/">
-        <h1>Contact me</h1>
+        <h1>{{ __('lang.cntm') }}</h1>
         <div class="info">
           <input class="fname" type="text" name="name" placeholder="Full name">
           <input type="text" name="name" placeholder="Email">
@@ -140,8 +141,8 @@ body{
 }
 
 .header .logo{
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     margin-left: 100px;
 }
 .header .menu ul li{
@@ -152,7 +153,7 @@ body{
 .header{
     align-items: center;
     background-color: black;
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100px;
     border-radius: 0 0 40% 10%;
@@ -175,7 +176,7 @@ li{
 .page-cont{
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: absolute;
     background-image: url({{asset('images/2227996.jpg')}});
     
 }
@@ -292,7 +293,7 @@ li{
       button:hover {
       background: #2371a0;
       }    </style>
-  
+  @endsection
 </body>
 
 </html>
